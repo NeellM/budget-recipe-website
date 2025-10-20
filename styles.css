@@ -1,0 +1,750 @@
+/* Import the Poppins font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Reset default styles for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Define the global styles for the body */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(rgba(255, 255, 255, 255), rgba(255, 255, 255, 255)); /* Background gradient */
+  min-height: 100vh; /* Minimum viewport height */
+  margin-top: 80px; /* Add top margin to create space for the fixed header */
+}
+.content{
+  margin-left: 20px;
+}
+
+/* Styles for the header */
+header {
+  position: fixed; /* Fixed position at the top of the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 5%; /* Padding for header content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10; /* Ensure header is above other content */
+  background-color: #FFFFFF
+  ;
+}
+
+
+/* Styles for the logo */
+.logo {
+  width: 200px;
+}
+
+/* Styles for navigation items */
+.nav-item {
+  position: relative;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: -0.13px;
+  text-decoration: none;
+  margin-left: 2.5rem; /* Spacing between navigation items */
+  transition: all 0.5s ease; /* Smooth hover transition */
+}
+
+#breakfast-link {
+  font-weight: 600;
+  font-size: 20px;
+  
+}
+/* Styles for navigation item hover effect */
+.nav-item:hover {
+  color: rgb(0, 0, 0, 95); /* Change color on hover */
+}
+
+/* Styles for navigation item underline effect */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  left: 50%;
+  width: 0;
+  height: 0.15rem;
+  transform: translateX(-50%);
+  background-color: rgb(255, 219, 99, 100); /* Underline color */
+  transition: all 0.5s ease;
+}
+
+/* Styles for navigation item underline on hover */
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* Styles for header icons */
+.icons {
+  position: absolute;
+  right: 5%;
+  font-size: 2.3rem;
+  color: #fff;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+}
+
+/* Checkbox input for the mobile menu toggle */
+#check {
+  display: none;
+}
+
+/* Styles for the hamburger menu icon */
+.hamburger {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 25px; /* Adjust the height to control the size of the hamburger icon */
+  cursor: pointer;
+}
+
+
+/* Styles for individual bars in the hamburger menu icon */
+.hamburger .bar {
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Show the navbar when the checkbox is checked */
+#check:checked ~ .navbar {
+  height: auto; /* Adjust this value based on your content's height */
+}
+
+/* Styles for the main content box */
+.box {
+  display: flex;
+  flex-direction: column; /* Stack the elements vertically */
+  align-items: center; /* Center the items horizontally */
+  text-align: center; /* Center the text within each box */
+  background: #E7E7E7; /* Background color */
+}
+
+/* Styles for inner boxes within the main content */
+.inner-box {
+  width: 100%; /* Make these boxes full width */
+  margin: 10px 0; /* Add some spacing between the text and navigation */
+}
+
+/* Styles for grid layout container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1rem; /* Gap between grid items */
+}
+
+/* Styles for h1 heading */
+h1 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  justify-self: right;
+  padding-top: 8%;
+  /*margin: 20px 40px 30px 35px;  Adjust margin values as needed */
+  font-size: 48px;
+}
+
+/* Styles for h2 heading */
+h2 {
+  margin-top: auto;
+  margin-left: 3%;
+}
+h3 {
+  margin-top: 70px;
+  margin-left: 3%;
+  margin-bottom: 30px;
+}
+.breadcrumbs {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for images within the grid */
+.image-container img {
+  width: 100%; /* Occupy the entire width of its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for the image container within the grid */
+.image-container {
+  grid-column: 1 / 2; /* Span first column */
+  grid-row: 1 / 2;
+  margin: 0, 0, 0, 0; /* Margin values */
+}
+
+/* Styles for the search box within the grid */
+.search-box {
+  grid-column: 2 / 3; /* Span one column and align with h1 */
+  grid-row: 2 / 3; /* Place the search box in the row below h1 */
+  display: flex;
+  align-items: center;
+  background: rgb(255, 255, 255); /* Background color */
+  border-radius: 20px; /* Border radius */
+  padding: 10px; /* Padding */
+  margin-top: 20px; /* Top margin */
+  width: 500px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+}
+/* Styles for the input field within the search box */
+.search-box input[type="text"] {
+  flex-grow: 1;
+  border: none;
+  background-color: #edf1f1d1; /* Background color */
+  outline: none;
+  padding: 10px; /* Padding */
+  border-radius: 10px; /* Border radius */
+}
+
+/* Styles for the submit button within the search box */
+.search-box button[type="submit"] {
+  background-color: #FFDB63; /* Background color */
+  color: rgb(0, 0, 0); /* Text color */
+  border: none;
+  border-radius: 10px; /* Border radius */
+  padding: 10px 20px; /* Padding */
+  margin-left: 10px; /* Left margin */
+  cursor: pointer;
+}
+
+/* Styles for the submit button on hover */
+.search-box button[type="submit"]:hover {
+  background-color: #51ff41e6; /* Hover background color */
+  color: #ffffff; /* Hover text color */
+}
+
+/* Styles for ordered list */
+ol {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  list-style: none;
+  padding-left: 2%; /* Left padding */
+  margin-top: 50px; /* Top margin */
+}
+
+/* Styles for list items within the ordered list */
+ol li {
+  padding: 0.5rem;
+}
+
+
+
+/* Styles for the main container */
+.container {
+  background: #ffffff; /* Background color */
+ /*  min-height: 100vh; Minimum viewport height */
+  overflow: hidden; /* Hide overflowing content */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for the card section */
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px; /* Gap between grid items */
+  padding: 20px 40px 40px 80px; /* Padding for the section */
+}
+
+/* Styles for individual cards */
+.card {
+  width: min(100%, 500px); /* Responsive card width */
+  background: rgba(255, 255, 255); /* Card background color */
+  border-radius: 16px; /* Card border radius */
+  font-family: "Poppins", sans-serif;
+  z-index: 5; /* Card z-index */
+}
+
+/* Styles for images within cards */
+.card > img {
+  display: block;
+  width: 100%;
+  max-width: 500px; /* Maximum image width */
+  aspect-ratio: 4/3; /* Image aspect ratio */
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 16px 16px 0 0; /* Image border radius */
+  filter: contrast(70%); /* Image filter */
+  transition: all 0.6s cubic-bezier(0.43, 0.41, 0.22, 0.91); /* Image transition */
+}
+
+/* Styles for image hover effect */
+.card > img:hover {
+  filter: contrast(100%); /* Image hover filter effect */
+}
+
+/* Styles for authentication buttons */
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Top margin for buttons */
+}
+
+/* Styles for login and signup buttons */
+.login-button,
+.signup-button {
+  padding: 10px 20px; /* Button padding */
+  margin: 0 10px; /* Margin between buttons */
+  background-color: #FFDB63; /* Button background color */
+  color: #060606; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Button border radius */
+  cursor: pointer; /* Cursor style */
+  transition: background-color 0.3s ease; /* Button hover transition */
+  border-radius: 15px; /* Button border radius */
+}
+
+/* Styles for button hover effect */
+.login-button:hover,
+.signup-button:hover {
+  background-color: #51ff41e6; /* Hover background color */
+  color: #ffffff; /* Hover text color */
+}
+
+/* Styles for card content */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px 20px;
+  background-color: #b7b6b6bf; /* Card content background color */
+  border-bottom-left-radius: 15px; /* Adjust the radius as needed */
+  border-bottom-right-radius: 15px; /* Adjust the radius as needed */
+}
+
+/* Styles for paragraphs within card content */
+.card-content > p {
+  margin-bottom: 10px; /* Bottom margin for paragraphs */
+}
+
+/* Styles for the first paragraph within card content */
+.card-content > p:nth-child(1) {
+  font-size: 1rem; /* Font size */
+  font-weight: 600; /* Font weight */
+  margin-bottom: 10px; /* Bottom margin */
+  color: #000; /* Text color */
+}
+
+/* Styles for the second paragraph within card content */
+.card-content > p:nth-child(2) {
+  font-size: 0.8rem; /* Font size */
+  font-weight: 400; /* Font weight */
+  color: #000000; /* Text color */
+}
+
+/* Styles for the popup overlay */
+.popup {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 100px;
+  left: 350px;
+  width: 50%;
+  height: relative; /* Relative height */
+  background: rgba(255, 255, 255, 0.7); /* Overlay background color */
+  z-index: 200; 
+  align-items: center;
+  justify-content: center;
+}
+/* Styles for the popup content */
+.popup-content {
+  background: #fff; /* Popup content background color */
+  padding: 20px; /* Padding for popup content */
+  border-radius: 5px; /* Popup content border radius */
+  box-shadow: 0 0 10px rgba(233, 221, 50, 0.719); /* Popup content shadow */
+  text-align: center; /* Center-align text within popup content */
+}
+
+/* Styles for the close button in the popup */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer; /* Cursor style for close button */
+}
+/* Styles for login form */
+form {
+  max-width: 300px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the form horizontally */
+  text-align: center; /* Center-align form elements */
+}
+
+/* Styles for form labels */
+label {
+  display: block; /* Display labels as block elements */
+  font-weight: bold; /* Make labels bold */
+  margin-bottom: 10px; /* Bottom margin for labels */
+  text-align: left; /* Left-align label text */
+}
+
+/* Styles for form input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%; /* Occupy the full width of the form */
+  padding: 10px; /* Padding for input fields */
+  margin-bottom: 20px; /* Bottom margin for input fields */
+  border: 1px solid #ccc; /* Border for input fields */
+  border-radius: 5px; /* Border radius for input fields */
+  font-size: 16px; /* Font size for input fields */
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+  background-color: #FFDB63; /* Button background color */
+  color: #060606; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Button border radius */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 16px; /* Font size for the button */
+  cursor: pointer; /* Cursor style on hover */
+  transition: background-color 0.3s ease; /* Button hover transition */
+}
+
+/* Style the submit button on hover */
+button[type="submit"]:hover {
+  background-color: #51ff41e6; /* Change background color on hover */
+  color: #ffffff; /* Change text color on hover */
+}
+
+
+/* Styles for the thank-you message */
+#thank-you {
+  display: none; /* Initially hidden */
+  margin-top: auto; /* Adjust margin for placement */
+  padding-left: 3%; /* Left padding */
+}
+
+/* Styles for form groups */
+.form-group {
+  display: flex; /* Use flexbox to arrange form elements vertically */
+  flex-direction: column; /* Stack the elements vertically */
+  align-items: right; /* Center-align items horizontally */
+  margin-bottom: 10px; /* Bottom margin for form groups */
+  padding-left: 7%; /* Left padding */
+}
+
+/* Styles for form labels */
+.form-group label {
+  font-weight: bold; /* Make labels bold */
+  text-align: left; /* Left-align label text */
+  margin-bottom: 5px; /* Bottom margin for labels */
+  margin-top: 5px; /* Top margin for labels */
+}
+
+/* Styles for form input fields */
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group input[type="email"] {
+  width: 300px; /* Fixed width for input fields */
+  padding: 10px; /* Padding for input fields */
+  border: 1px solid #ccc; /* Border for input fields */
+  border-radius: 5px; /* Border radius for input fields */
+  font-size: 16px; /* Font size for input fields */
+  text-align: center; /* Center-align text in input fields */
+  margin-bottom: 10px; /* Bottom margin for input fields */
+}
+
+/* Styles for the form submit button */
+.form-group button[type="submit"] {
+  width: 200px; /* Fixed width for the button */
+  height: 50PX; /* Button height */
+  background-color: #FFDB63; /* Button background color */
+  color: #060606; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Button border radius */
+  cursor: pointer; /* Cursor style on hover */
+  transition: background-color 0.3s ease; /* Button hover transition */
+}
+
+/* Style the submit button on hover */
+.form-group button[type="submit"]:hover {
+  background-color: #51ff41e6; /* Change background color on hover */
+  color: #ffffff; /* Change text color on hover */
+}
+
+.recipe-image {
+  width: 100%;
+  height: 600px; /* Image spans the entire width of the content area */
+  margin: 20px 0; /* Add top and bottom margin */
+  padding: 0; /* No padding for the image */
+}
+
+.recipe-title {
+  font-size: 24px;
+  margin: 10px 0;
+ /* padding: 0 20px;  Add padding to the left and right */
+  padding-left: 40%;
+}
+.ingredients {
+  width: 45%; /* Left side, adjust as needed */
+  float: left; /* Float left for side-by-side placement */
+  margin: 20px 2.5% 20px 5%; /* Margin for the left side */
+}
+.ingredients ul {
+  list-style-type: disc; /* Use bullets for the ingredients list */
+  padding-left: 20px; /* Add some left padding for the list */
+}
+
+.procedure ol {
+  list-style-type: decimal; /* Use numbers for the procedure steps */
+  padding-left: 20px; /* Add some left padding for the list */
+}
+/* Reset some default margin/padding and ensure body takes full height */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the footer */
+footer {
+  background-color: #333; /* Choose your preferred background color */
+  color: #fff; /* Text color for the footer */
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Make the footer responsive for smaller screens */
+@media (max-width: 768px) {
+  footer {
+      padding: 10px 0;
+  }
+}
+
+
+@media (max-width: 900px) {
+  header {
+    padding: 1.3rem 5%;
+  }
+
+  .content h1 {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 700px) {
+  header::before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 95);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+
+  }
+
+  header::after {
+    content: "";
+    top: 0;
+    left: -100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 98),
+      transparent
+    );
+    transition: 0.8s;
+  }
+
+  .icons {
+    display: inline-flex;
+  }
+
+  #check:checked ~ .icons #menu-icon {
+    display: none;
+  }
+
+  .icons #close-icon {
+    display: none;
+  }
+
+  #check:checked ~ .icons #close-icon {
+    display: block;
+  }
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 36px 29px 30px 57px;
+}
+
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(255, 255, 255, 100);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  #check:checked ~ .navbar {
+    height: 17.7rem;
+  }
+
+  .nav-item {
+    display: block;
+    font-size: 1.1rem;
+    margin: 2rem 0;
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .nav-item:hover::after {
+    width: auto;
+  }
+
+  #check:checked ~ .navbar a {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(0.15s * var(--i));
+  }
+  
+  /**/
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .inner-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .content h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    margin-top: 60px; /* Reduce top margin to create more space */
+  }
+  .grid-container{
+    grid-template-columns: 1fr;
+  }
+  .recipe-content{
+    grid-template-columns: 1fr;
+
+  }
+  header {
+    padding: 0.8rem 5%; /* Adjust header padding */
+  }
+  .nav-item {
+    margin-left: 1rem; /* Reduce spacing between navigation items */
+    font-size: 0.9rem;
+  }
+  section {
+    grid-template-columns: 1fr; /* Display a single column */
+  }
+  .image-container {
+    display: none;
+  }
+  /* Adjust search box width */
+    .search-box {
+      width: 90%; /* Make the search box wider on smaller screens */
+      margin: 0 auto; /* Center the search box horizontally */
+      text-align: center; /* Center text within the search box */
+    }
+  /* Make the search box wider on smaller screens */
+
+  /* Reduce font size for h1 heading */
+  h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-align: center; /* Center the heading text */
+
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+.content h2{
+  font-size: 1rem; /* Adjust the font size for h2 */
+  margin-top: 100px; /* Add some spacing between h1 and h2 */
+  text-align: center; /* You can keep this if needed */
+}
+  /* Adjust card width and margins for small screens */
+  .card {
+    width: 100%;
+    margin: 0 0 20px 0; /* Adjust margins for better stacking */
+  }
+
+  /* Reduce font size for card content */
+  .card-content > p {
+    font-size: 0.9rem;
+    margin-bottom: 8px; /* Reduce bottom margin for paragraphs */
+  }
+
+  /* Adjust padding for the close button in the popup */
+  .close {
+    top: 5px;
+    right: 5px;
+  }
+
+  /* Reduce font size for form elements in the popup */
+  form label {
+    font-size: 0.9rem;
+  }
+
+  /* Adjust input and button styles in the search box */
+  .search-box input[type="text"] {
+    padding: 8px;
+  }
+
+  .search-box button[type="submit"] {
+    padding: 8px 16px;
+  }
+  .popup {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+

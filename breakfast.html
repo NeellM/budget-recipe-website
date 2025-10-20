@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Breakfast Menu | Budget Parent Recipe</title>
+    <meta name="description" content="Delicious and affordable breakfast recipes for kids and families.">
+</head>
+<body>
+    <header class="scrolled-header">
+        <a href="index.html">
+            <img src="assets/icons/Logo.svg" alt="Budget Recipe Logo" class="logo">
+        </a>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </label>
+        <div class="navbar">
+            <a href="breakfast.html" class="nav-item active" style="--i: 1">Breakfast</a>
+            <a href="dinner.html" class="nav-item" style="--i: 2">Dinner</a>
+            <a href="favorites.html" class="nav-item" style="--i: 0">Favorites</a>
+            <a href="#" class="nav-item" style="--i: 2" id="login-link">Login/Signup</a>
+            <a href="contact.html" class="nav-item" style="--i: 3">Contact Us</a>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>Breakfast Menu</h1>
+        <p>Start your day with our budget-friendly breakfast recipes!</p>
+    </div>
+
+    <h2>Under $2</h2>
+    <div class="container">
+        <section>
+            <a href="pages/recipes/banana-smoothie.html">
+                <div class="card">
+                    <img src="assets/images/bananasmo.jpg" alt="Banana Smoothie" />
+                    <div class="card-content">
+                        <p>Banana Smoothie</p>
+                        <p>A creamy banana smoothie made with ripe bananas, yogurt, and a hint of vanilla. Kids will love this delicious and healthy drink.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/cheesy-omelette.html">
+                <div class="card">
+                    <img src="assets/images/omelette.jpg" alt="Cheesy Omelette" />
+                    <div class="card-content">
+                        <p>Cheesy Omelette</p>
+                        <p>A savory omelette made with eggs, cheese, and your choice of fillings like mushrooms, spinach, and bell peppers.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/oatmeal.html">
+                <div class="card">
+                    <img src="assets/images/oatmeal.jpg" alt="Healthy Oatmeal" />
+                    <div class="card-content">
+                        <p>Healthy Oatmeal</p>
+                        <p>Nutritious oatmeal topped with sliced bananas, a drizzle of honey, and a sprinkle of cinnamon.</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <h2>Under $5</h2>
+    <div class="container">
+        <section>
+            <a href="pages/recipes/banana-pancakes.html">
+                <div class="card">
+                    <img src="assets/images/bpc1.avif" alt="Banana Pancakes" />
+                    <div class="card-content">
+                        <p>Banana Pancakes</p>
+                        <p>Easy and healthy pancakes for your little one in less than 10 minutes</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/avocado-toast.html">
+                <div class="card">
+                    <img src="assets/images/avocado-toast.jpg" alt="Avocado Toast" />
+                    <div class="card-content">
+                        <p>Avocado Toast</p>
+                        <p>Healthy and nutritious avocado toast topped with sliced avocados, cherry tomatoes, and a sprinkle of sea salt.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/fresh-salad-sandwich.html">
+                <div class="card">
+                    <img src="assets/images/sandimg.jpg" alt="Fresh Salad Sandwich" />
+                    <div class="card-content">
+                        <p>Fresh Salad Sandwich</p>
+                        <p>Packed with vibrant vegetables and mouthwatering flavors for a wholesome meal</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <h2>Under $7</h2>
+    <div class="container">
+        <section>
+            <a href="pages/recipes/yogurt-parfait.html">
+                <div class="card">
+                    <img src="assets/images/yogurt-parfait.jpg" alt="Yogurt Parfait" />
+                    <div class="card-content">
+                        <p>Yogurt Parfait</p>
+                        <p>Delicious layered parfait with Greek yogurt, fresh berries, granola, and honey.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/fruit-salad.html">
+                <div class="card">
+                    <img src="assets/images/fruit-salad.jpg" alt="Fruit Salad" />
+                    <div class="card-content">
+                        <p>Fruit Salad</p>
+                        <p>Colorful fruit salad featuring a mix of fresh fruits like apples, oranges, and grapes. A great way to get kids to eat more fruit.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/peanut-butter-toast.html">
+                <div class="card">
+                    <img src="assets/images/avocado-toast.jpg" alt="Peanut Butter Toast" />
+                    <div class="card-content">
+                        <p>Peanut Butter Toast</p>
+                        <p>Protein-packed breakfast with banana slices and honey - ready in minutes!</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/grilled-cheese.html">
+                <div class="card">
+                    <img src="assets/images/sandimg.jpg" alt="Grilled Cheese" />
+                    <div class="card-content">
+                        <p>Grilled Cheese Sandwich</p>
+                        <p>Classic comfort food with melted cheese - perfect for breakfast or brunch!</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <!-- Login Popup -->
+    <div id="lp" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLp()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" id="login-submit">Login</button>
+                <p>Not a member? <a href="signup.html">Signup</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Budget Parent Recipe | COIT20268 Project</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

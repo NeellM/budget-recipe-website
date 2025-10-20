@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Favorites | Budget Parent Recipes</title>
+</head>
+<body>
+    <header class="scrolled-header">
+        <a href="Home.html">
+            <img src="logo.svg" alt="logo" class="logo">
+        </a>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </label>
+        <div class="navbar">
+            <a href="breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
+            <a href="dinner.html" class="nav-item" style="--i: 2">Dinner</a>
+            <a href="fav.html" class="nav-item" style="--i: 0">Favorites</a>
+            <a href="#" class="nav-item" style="--i: 2" id="login-link">Login/signup</a>
+            <a href="contactus.html" class="nav-item" style="--i: 3">Contact Us</a>
+        </div>
+    </header>
+    <div class="content">
+        <h1>Your Favorites</h1>
+    </div>
+    <div class="container">
+        <section>
+            <div class="card">
+                <img src="fruit-salad.jpg" alt="image" />
+                <div class="card-content">
+                    <p>Fruit Salad</p>
+                    <p>Colorful fruit salad featuring a mix of fresh fruits like apples, oranges, and grapes. A great way to get kids to eat more fruit.</p>
+                </div>
+            </div>
+            <a href="co.html">
+                <div class="card">
+                    <img src="omelette.jpg" alt="image" />
+                    <div class="card-content">
+                        <p>Cheesy Omelette</p>
+                        <p>A savory omelette made with eggs, cheese, and your choice of fillings like mushrooms, spinach, and bell peppers.</p>
+                    </div>
+                </div>
+            </a>
+            <div class="card">
+                <img src="avocado-toast.jpg" alt="image" />
+                <div class="card-content">
+                    <p>Avocado Toast</p>
+                    <p>Healthy and nutritious avocado toast topped with sliced avocados, cherry tomatoes, and a sprinkle of sea salt.</p>
+                </div>
+            </div>
+            <a href="fs.html">
+                <div class="card">
+                    <img src="sandimg.jpg" alt="image" />
+                    <div class="card-content">
+                        <p>Fresh Salad Sandwich</p>
+                        <p>Packed with vibrant vegetables and mouthwatering flavors and a wholesome meal.</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+    </div>
+    <div id="lp" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLp()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit" id="login-submit">Login</button>
+                <p>Not a member? <a href="signup.html">Signup</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="popup2.js"></script>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; Neel Project b Coit20268</p>
+        </div>
+    </footer>
+</body>
+</html>

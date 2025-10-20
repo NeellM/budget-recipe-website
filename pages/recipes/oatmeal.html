@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <title>Healthy Oatmeal Recipe | Budget Parent Recipe</title>
+    <meta name="description" content="Nutritious and filling oatmeal perfect for a healthy breakfast.">
+</head>
+<body>
+    <header class="scrolled-header">
+        <a href="../../index.html">
+            <img src="../../assets/icons/Logo.svg" alt="Budget Recipe Logo" class="logo">
+        </a>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </label>
+        <div class="navbar">
+            <a href="../../breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
+            <a href="../../dinner.html" class="nav-item" style="--i: 2">Dinner</a>
+            <a href="../../favorites.html" class="nav-item" style="--i: 0">Favorites</a>
+            <a href="#" class="nav-item" style="--i: 2" id="login-link">Login/Signup</a>
+            <a href="../../contact.html" class="nav-item" style="--i: 3">Contact Us</a>
+        </div>
+    </header>
+
+    <h3>
+        <nav class="breadcrumbs">
+            <a href="../../index.html">Home</a> &gt;
+            <a href="../../breakfast.html">Breakfast</a> &gt;
+            <a href="#">Healthy Oatmeal</a>
+        </nav>
+    </h3>
+
+    <div class="grid-container">
+        <div class="image-container">
+            <img src="../../assets/images/oatmeal.jpg" alt="Healthy Oatmeal Bowl">
+        </div>
+        <div class="recipe-content">
+            <ol>
+                <li>
+                    <h1>Healthy Oatmeal</h1>
+                </li>
+                <li>
+                    <p>
+                        <div class="ingredients">
+                            <h2 class="section-title">Ingredients:</h2>
+                            <ul>
+                                <li>1 cup rolled oats</li>
+                                <li>2 cups water or milk</li>
+                                <li>1/4 teaspoon salt</li>
+                                <li>1 tablespoon honey or brown sugar</li>
+                                <li>1/2 teaspoon cinnamon</li>
+                                <li>1/4 teaspoon vanilla extract</li>
+                                <li>Toppings: fresh berries, sliced banana, nuts, or dried fruit</li>
+                                <li>Optional: chia seeds, flax seeds, or peanut butter</li>
+                            </ul>
+                        </div>
+                    </p>
+                </li>
+                <li>
+                    <div class="procedure">
+                        <h2 class="section-title">Procedure:</h2>
+                        <ul>
+                            <li>In a medium saucepan, bring water or milk to a boil</li>
+                            <li>Add salt and reduce heat to medium-low</li>
+                            <li>Stir in the rolled oats and cook, stirring occasionally</li>
+                            <li>Simmer for 5-7 minutes until oats are soft and have absorbed most of the liquid</li>
+                            <li>Remove from heat and stir in honey, cinnamon, and vanilla extract</li>
+                            <li>Let stand for 2-3 minutes to thicken</li>
+                            <li>Transfer to serving bowls</li>
+                            <li>Add your favorite toppings: fresh berries, sliced bananas, nuts, or dried fruit</li>
+                            <li>For extra nutrition, sprinkle with chia seeds or flax seeds</li>
+                            <li>Serve warm and enjoy immediately</li>
+                        </ul>
+                        <p><strong>Prep Time:</strong> 2 minutes | <strong>Cook Time:</strong> 7 minutes | <strong>Serves:</strong> 2</p>
+                        <p><strong>Cost:</strong> Under $2</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Login Popup -->
+    <div id="lp" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLp()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" id="login-submit">Login</button>
+                <p>Not a member? <a href="../../signup.html">Signup</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Budget Parent Recipe | COIT20268 Project</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/main.js"></script>
+</body>
+</html>

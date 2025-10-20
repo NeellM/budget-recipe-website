@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <title>Banana Smoothie Recipe | Budget Parent Recipe</title>
+    <meta name="description" content="Quick and nutritious banana smoothie packed with vitamins and energy.">
+</head>
+<body>
+    <header class="scrolled-header">
+        <a href="../../index.html">
+            <img src="../../assets/icons/Logo.svg" alt="Budget Recipe Logo" class="logo">
+        </a>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </label>
+        <div class="navbar">
+            <a href="../../breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
+            <a href="../../dinner.html" class="nav-item" style="--i: 2">Dinner</a>
+            <a href="../../favorites.html" class="nav-item" style="--i: 0">Favorites</a>
+            <a href="#" class="nav-item" style="--i: 2" id="login-link">Login/Signup</a>
+            <a href="../../contact.html" class="nav-item" style="--i: 3">Contact Us</a>
+        </div>
+    </header>
+
+    <h3>
+        <nav class="breadcrumbs">
+            <a href="../../index.html">Home</a> &gt;
+            <a href="../../breakfast.html">Breakfast</a> &gt;
+            <a href="#">Banana Smoothie</a>
+        </nav>
+    </h3>
+
+    <div class="grid-container">
+        <div class="image-container">
+            <img src="../../assets/images/bananasmo.jpg" alt="Creamy Banana Smoothie">
+        </div>
+        <div class="recipe-content">
+            <ol>
+                <li>
+                    <h1>Banana Smoothie</h1>
+                </li>
+                <li>
+                    <p>
+                        <div class="ingredients">
+                            <h2 class="section-title">Ingredients:</h2>
+                            <ul>
+                                <li>2 ripe bananas (fresh or frozen)</li>
+                                <li>1 cup plain or vanilla yogurt</li>
+                                <li>1/2 cup milk (dairy or non-dairy)</li>
+                                <li>1-2 tablespoons honey or maple syrup</li>
+                                <li>1/2 teaspoon vanilla extract</li>
+                                <li>4-5 ice cubes (if using fresh bananas)</li>
+                                <li>Optional: 1 tablespoon peanut butter or a handful of spinach</li>
+                            </ul>
+                        </div>
+                    </p>
+                </li>
+                <li>
+                    <div class="procedure">
+                        <h2 class="section-title">Procedure:</h2>
+                        <ul>
+                            <li>Peel and slice the bananas into chunks</li>
+                            <li>Place sliced bananas in the blender</li>
+                            <li>Add yogurt, milk, honey, and vanilla extract into the blender</li>
+                            <li>If using fresh bananas, add ice cubes for a cold, thick smoothie</li>
+                            <li>Blend all ingredients on high speed until smooth and creamy (30 seconds to 1 minute)</li>
+                            <li>Taste and adjust sweetness by adding more honey if needed</li>
+                            <li>Pour into glasses and serve immediately</li>
+                            <li>Optional: Top with sliced banana, granola, or chia seeds</li>
+                        </ul>
+                        <p><strong>Prep Time:</strong> 5 minutes | <strong>Serves:</strong> 2</p>
+                        <p><strong>Cost:</strong> Under $2</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Login Popup -->
+    <div id="lp" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLp()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" id="login-submit">Login</button>
+                <p>Not a member? <a href="../../signup.html">Signup</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Budget Parent Recipe | COIT20268 Project</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/main.js"></script>
+</body>
+</html>

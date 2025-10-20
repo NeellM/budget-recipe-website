@@ -1,0 +1,23 @@
+{
+  "name": "budget-parent-recipe-website",
+  "version": "1.0.0",
+  "description": "Budget-friendly recipe website for parents - COIT20268 University Project",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o",
+    "dev": "npx http-server -p 8080 -o"
+  },
+  "keywords": [
+    "recipes",
+    "budget",
+    "food",
+    "parents",
+    "cooking",
+    "nutrition"
+  ],
+  "author": "Neel",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

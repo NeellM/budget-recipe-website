@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <title>Fresh Salad Sandwich Recipe | Budget Parent Recipe</title>
+    <meta name="description" content="Packed with vibrant vegetables and mouthwatering flavors for a wholesome meal.">
+</head>
+<body>
+    <header class="scrolled-header">
+        <a href="../../index.html">
+            <img src="../../assets/icons/Logo.svg" alt="Budget Recipe Logo" class="logo">
+        </a>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </label>
+        <div class="navbar">
+            <a href="../../breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
+            <a href="../../dinner.html" class="nav-item" style="--i: 2">Dinner</a>
+            <a href="../../favorites.html" class="nav-item" style="--i: 0">Favorites</a>
+            <a href="#" class="nav-item" style="--i: 2" id="login-link">Login/Signup</a>
+            <a href="../../contact.html" class="nav-item" style="--i: 3">Contact Us</a>
+        </div>
+    </header>
+
+    <h3>
+        <nav class="breadcrumbs">
+            <a href="../../index.html">Home</a> &gt;
+            <a href="../../breakfast.html">Breakfast</a> &gt;
+            <a href="#">Fresh Salad Sandwich</a>
+        </nav>
+    </h3>
+
+    <div class="grid-container">
+        <div class="image-container">
+            <img src="../../assets/images/sandimg.jpg" alt="Fresh Salad Sandwich">
+        </div>
+        <div class="recipe-content">
+            <ol>
+                <li>
+                    <h1>Fresh Salad Sandwich</h1>
+                </li>
+                <li>
+                    <p>
+                        <div class="ingredients">
+                            <h2 class="section-title">Ingredients:</h2>
+                            <ul>
+                                <li>4 slices whole wheat bread</li>
+                                <li>1 cup mixed lettuce leaves</li>
+                                <li>1 tomato, sliced</li>
+                                <li>1/2 cucumber, thinly sliced</li>
+                                <li>1/4 red onion, thinly sliced</li>
+                                <li>1/2 bell pepper, sliced</li>
+                                <li>2 tablespoons mayonnaise or hummus</li>
+                                <li>1 tablespoon mustard (optional)</li>
+                                <li>Salt and pepper to taste</li>
+                                <li>Optional: sliced cheese, avocado, or sprouts</li>
+                            </ul>
+                        </div>
+                    </p>
+                </li>
+                <li>
+                    <div class="procedure">
+                        <h2 class="section-title">Procedure:</h2>
+                        <ul>
+                            <li>Wash and prepare all vegetables - slice tomato, cucumber, bell pepper, and onion</li>
+                            <li>Toast the bread slices lightly if desired for extra crunch</li>
+                            <li>Spread mayonnaise or hummus on one side of each bread slice</li>
+                            <li>If using mustard, spread it on the other slices</li>
+                            <li>Layer lettuce leaves on the bottom slice of bread</li>
+                            <li>Add tomato slices, cucumber, bell pepper, and onion on top</li>
+                            <li>Season with a pinch of salt and pepper</li>
+                            <li>Add cheese or avocado if using</li>
+                            <li>Top with the second slice of bread, spread side down</li>
+                            <li>Cut diagonally for easier eating and serve fresh</li>
+                        </ul>
+                        <p><strong>Prep Time:</strong> 10 minutes | <strong>Serves:</strong> 2</p>
+                        <p><strong>Cost:</strong> Under $5</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Login Popup -->
+    <div id="lp" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLp()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" id="login-submit">Login</button>
+                <p>Not a member? <a href="../../signup.html">Signup</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Budget Parent Recipe | COIT20268 Project</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/main.js"></script>
+</body>
+</html>

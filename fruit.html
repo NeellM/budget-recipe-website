@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Include your stylesheet link here if needed -->
+    <title>Banana Pancakes Recipe</title>
+</head>
+<body>
+    <header class="scrolled-header">
+        <a href="Home.html">
+            <img src="logo.svg" alt="logo" class="logo">
+        </a>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </label>
+        <div class="navbar">
+            <a href="breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
+            <a href="dinner.html" class="nav-item" style="--i: 2" >Dinner</a>
+            <a href="fav.html" class="nav-item" style="--i: 0">Favorites</a>
+            <a href="#" class="nav-item" style="--i: 2" id="login-link">Login/signup</a>
+            <a href="contactus.html" class="nav-item" style="--i: 3">Contact Us</a>
+
+        </div>
+    </header>
+    <H3><nav class="breadcrumbs">
+        <a href="Home.html">Home</a> &gt;
+        <a href="breakfast.html">Breakfast</a> &gt;
+        <a href="#">Recipe</a>
+    </nav></H3>
+    <div class="grid-container">
+        <div class="image-container">
+            <img src="resources/fruit-salad.jpg" alt="Hero image">
+        </div>
+        <div class="recipe-content">
+        <ol>
+          <li><h1>Fruit Salad</h1></li>
+          <li><p><div class="ingredients">
+            <h2 class="section-title">Ingredients:</h2>
+            <ul>
+                <li>Recipie will be available soon</li>
+            </ul>
+        </div></p>
+          </li>
+          <li>  <div class="procedure">
+            <h2 class="section-title">Procedure:</h2>
+            <ul>
+             
+                <li>Under development, Thank you for your patience</li>
+            </ul></li>
+        </ol>
+        </div>
+      </div>
+      <div id="lp" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLp()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit" id="login-submit">Login</button>
+                <p>Not a member? <a href="signup.html">Signup</a></p>
+      
+      
+            </form>
+        </div>
+      </div>
+      <script src="popup2.js"></script>
+
+</body>
+</html>

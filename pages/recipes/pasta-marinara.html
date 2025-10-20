@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <title>Simple Pasta Marinara Recipe | Budget Parent Recipe</title>
+    <meta name="description" content="Classic pasta with homemade marinara sauce - kids love it!">
+</head>
+<body>
+    <header class="scrolled-header">
+        <a href="../../index.html">
+            <img src="../../assets/icons/Logo.svg" alt="Budget Recipe Logo" class="logo">
+        </a>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </label>
+        <div class="navbar">
+            <a href="../../breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
+            <a href="../../dinner.html" class="nav-item" style="--i: 2">Dinner</a>
+            <a href="../../favorites.html" class="nav-item" style="--i: 0">Favorites</a>
+            <a href="#" class="nav-item" style="--i: 2" id="login-link">Login/Signup</a>
+            <a href="../../contact.html" class="nav-item" style="--i: 3">Contact Us</a>
+        </div>
+    </header>
+
+    <h3>
+        <nav class="breadcrumbs">
+            <a href="../../index.html">Home</a> &gt;
+            <a href="../../dinner.html">Dinner</a> &gt;
+            <a href="#">Pasta Marinara</a>
+        </nav>
+    </h3>
+
+    <div class="grid-container">
+        <div class="image-container">
+            <img src="../../assets/images/omelette.jpg" alt="Pasta Marinara">
+        </div>
+        <div class="recipe-content">
+            <ol>
+                <li>
+                    <h1>Simple Pasta Marinara</h1>
+                </li>
+                <li>
+                    <p>
+                        <div class="ingredients">
+                            <h2 class="section-title">Ingredients:</h2>
+                            <ul>
+                                <li>8 oz spaghetti or penne pasta</li>
+                                <li>1 can (14 oz) crushed tomatoes</li>
+                                <li>3 cloves garlic, minced</li>
+                                <li>2 tablespoons olive oil</li>
+                                <li>1 teaspoon dried basil</li>
+                                <li>1 teaspoon dried oregano</li>
+                                <li>Salt and pepper to taste</li>
+                                <li>Parmesan cheese for serving</li>
+                                <li>Fresh basil leaves (optional)</li>
+                            </ul>
+                        </div>
+                    </p>
+                </li>
+                <li>
+                    <div class="procedure">
+                        <h2 class="section-title">Procedure:</h2>
+                        <ul>
+                            <li>Bring a large pot of salted water to boil</li>
+                            <li>Cook pasta according to package directions, drain and set aside</li>
+                            <li>In a large pan, heat olive oil over medium heat</li>
+                            <li>Add minced garlic and sauté for 1 minute until fragrant</li>
+                            <li>Pour in crushed tomatoes and stir well</li>
+                            <li>Add basil, oregano, salt, and pepper</li>
+                            <li>Simmer sauce for 10-15 minutes, stirring occasionally</li>
+                            <li>Toss cooked pasta with the sauce</li>
+                            <li>Serve hot with grated Parmesan and fresh basil</li>
+                        </ul>
+                        <p><strong>Prep Time:</strong> 10 minutes | <strong>Cook Time:</strong> 20 minutes | <strong>Serves:</strong> 4</p>
+                        <p><strong>Cost:</strong> Under $5</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div id="lp" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLp()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" id="login-submit">Login</button>
+                <p>Not a member? <a href="../../signup.html">Signup</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Budget Parent Recipe | COIT20268 Project</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/main.js"></script>
+</body>
+</html>

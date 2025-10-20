@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /B)",
+      "Bash(ls \"c:\\Users\\neell\\OneDrive\\Desktop\\Learning\\Projects\\A3_ProjectB_Prototype (2)\\Neelprtofinal\")",
+      "Bash(mkdir -p assets/images assets/icons styles scripts pages/recipes docs)",
+      "Bash(cp -r resources/* assets/images/)",
+      "Bash(cp Logo.svg assets/icons/)",
+      "Bash(cp styles.css styles/)",
+      "Bash(cp popup.js popup2.js scripts/)",
+      "Bash(cp \"User testing.pdf\" docs/)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

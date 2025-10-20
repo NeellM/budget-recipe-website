@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <header class="scrolled-header">
+        <a href="Home.html">
+            <img src="logo.svg" alt="logo" class="logo">
+        </a>
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </label>
+        <div class="navbar">
+            <a href="breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
+            <a href="dinner.html" class="nav-item" style="--i: 2">Dinner</a>
+            <a href="fav.html" class="nav-item" style="--i: 0">Favorites</a>
+            <a href="#" class="nav-item" style="--i: 2" id="login-link">Login/signup</a>
+            <a href="contactus.html" class="nav-item" style="--i: 3">Contact Us</a>
+        </div>
+    </header>
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="85" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close" id="close-thank-you-popup">&times;</span>
+            <h2>Thank You</h2>
+            <div class="thank-you-details">
+                <p>Name: <span id="thank-you-name"></span></p>
+                <p>Phone: <span id="thank-you-phone"></span></p>
+                <p>Age: <span id="thank-you-age"></span></p>
+                <p>Email: <span id="thank-you-email"></span></p>
+            </div>
+        </div>
+    </div>
+    <div id="lp" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLp()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" id="login-submit">Login</button>
+                <p>Not a member? <a href="signup.html">Signup</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="popup2.js"></script>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; Neel Project b Coit20268</p>
+        </div>
+    </footer>
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <title>Chicken Quesadilla Recipe | Budget Parent Recipe</title>
+</head>
+<body>
+    <header class="scrolled-header">
+        <a href="../../index.html"><img src="../../assets/icons/Logo.svg" alt="Budget Recipe Logo" class="logo"></a>
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons"><div class="hamburger"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></label>
+        <div class="navbar">
+            <a href="../../breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
+            <a href="../../dinner.html" class="nav-item" style="--i: 2">Dinner</a>
+            <a href="../../favorites.html" class="nav-item" style="--i: 0">Favorites</a>
+            <a href="#" class="nav-item" style="--i: 2" id="login-link">Login/Signup</a>
+            <a href="../../contact.html" class="nav-item" style="--i: 3">Contact Us</a>
+        </div>
+    </header>
+    <h3><nav class="breadcrumbs"><a href="../../index.html">Home</a> &gt; <a href="../../dinner.html">Dinner</a> &gt; <a href="#">Chicken Quesadilla</a></nav></h3>
+    <div class="grid-container">
+        <div class="image-container"><img src="../../assets/images/omelette.jpg" alt="Chicken Quesadilla"></div>
+        <div class="recipe-content">
+            <ol>
+                <li><h1>Chicken Quesadilla</h1></li>
+                <li><div class="ingredients"><h2 class="section-title">Ingredients:</h2><ul><li>4 flour tortillas</li><li>2 cups cooked chicken, shredded</li><li>1 cup shredded cheese</li><li>1/2 bell pepper, diced</li><li>1/4 onion, diced</li><li>2 tablespoons vegetable oil</li><li>Salsa and sour cream for serving</li></ul></div></li>
+                <li><div class="procedure"><h2 class="section-title">Procedure:</h2><ul><li>Heat oil in a pan, sauté onions and peppers until soft</li><li>Add shredded chicken and warm through</li><li>Place tortilla in pan, sprinkle half with cheese</li><li>Add chicken mixture on top of cheese</li><li>Add more cheese and fold tortilla in half</li><li>Cook 2-3 minutes per side until golden and cheese melts</li><li>Cut into wedges and serve with salsa and sour cream</li></ul><p><strong>Prep:</strong> 10 min | <strong>Cook:</strong> 15 min | <strong>Serves:</strong> 4 | <strong>Cost:</strong> Under $7</p></div></li>
+            </ol>
+        </div>
+    </div>
+    <div id="lp" class="popup"><div class="popup-content"><span class="close" onclick="closeLp()">&times;</span><h2>Login</h2><form><label for="username">Username:</label><input type="text" id="username" required><label for="password">Password:</label><input type="password" id="password" required><button type="submit" id="login-submit">Login</button><p>Not a member? <a href="../../signup.html">Signup</a></p></form></div></div>
+    <footer><div class="footer-content"><p>&copy; 2024 Budget Parent Recipe | COIT20268 Project</p></div></footer>
+    <script src="../../scripts/main.js"></script>
+</body>
+</html>

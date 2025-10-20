@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Home | Budget Parent Recipe</title>
+    <meta name="description" content="Budget-friendly recipes for parents. Eat smart, spend less with our delicious meal ideas.">
+</head>
+<body>
+    <header class="scrolled-header">
+        <a href="index.html">
+            <img src="assets/icons/Logo.svg" alt="Budget Recipe Logo" class="logo">
+        </a>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </label>
+        <div class="navbar">
+            <a href="breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
+            <a href="dinner.html" class="nav-item" style="--i: 2">Dinner</a>
+            <a href="favorites.html" class="nav-item" style="--i: 0">Favorites</a>
+            <a href="#" class="nav-item" style="--i: 2" id="login-link">Login/Signup</a>
+            <a href="contact.html" class="nav-item" style="--i: 3">Contact Us</a>
+        </div>
+    </header>
+
+    <div class="grid-container">
+        <div class="image-container">
+            <img src="assets/images/heroimg.svg" alt="Delicious budget-friendly food">
+        </div>
+        <ol>
+            <li>
+                <h1>Eat Smart, Spend Less: Budget-Friendly Delights Await Your Palate!</h1>
+            </li>
+            <li>
+                <p>At our food haven, we believe that enjoying delicious meals shouldn't come at the cost of your wallet. Our mission is to show you that eating on a budget can still be a mouthwatering experience!</p>
+            </li>
+            <li>
+                <div class="search-box">
+                    <input type="text" id="search" placeholder="Search for dishes...">
+                    <button type="submit" id="search-button">Search</button>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <h2>Our Popular Recipes</h2>
+    <div class="container">
+        <section>
+            <a href="pages/recipes/banana-pancakes.html">
+                <div class="card">
+                    <img src="assets/images/bpc1.avif" alt="Banana Pancakes" />
+                    <div class="card-content">
+                        <p>Banana Pancakes</p>
+                        <p>Easy and healthy pancakes for your little one in less than 10 minutes</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/fresh-salad-sandwich.html">
+                <div class="card">
+                    <img src="assets/images/sandimg.jpg" alt="Fresh Salad Sandwich" />
+                    <div class="card-content">
+                        <p>Fresh Salad Sandwich</p>
+                        <p>Packed with vibrant vegetables and mouthwatering flavors for a wholesome meal</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/cheesy-omelette.html">
+                <div class="card">
+                    <img src="assets/images/omelette.jpg" alt="Cheesy Omelette" />
+                    <div class="card-content">
+                        <p>Cheesy Omelette</p>
+                        <p>A savory omelette made with eggs, cheese, and your choice of fillings like mushrooms, spinach, and bell peppers.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/grilled-cheese.html">
+                <div class="card">
+                    <img src="assets/images/sandimg.jpg" alt="Grilled Cheese Sandwich" />
+                    <div class="card-content">
+                        <p>Grilled Cheese Sandwich</p>
+                        <p>Classic comfort food that kids absolutely love - crispy bread with melted cheese perfection!</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/peanut-butter-toast.html">
+                <div class="card">
+                    <img src="assets/images/avocado-toast.jpg" alt="Peanut Butter Toast" />
+                    <div class="card-content">
+                        <p>Peanut Butter Toast</p>
+                        <p>Protein-packed breakfast with banana slices and a drizzle of honey - ready in 5 minutes!</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/pasta-marinara.html">
+                <div class="card">
+                    <img src="assets/images/omelette.jpg" alt="Simple Pasta Marinara" />
+                    <div class="card-content">
+                        <p>Simple Pasta Marinara</p>
+                        <p>Classic Italian pasta with homemade tomato sauce that the whole family will enjoy!</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/egg-fried-rice.html">
+                <div class="card">
+                    <img src="assets/images/omelette.jpg" alt="Egg Fried Rice" />
+                    <div class="card-content">
+                        <p>Egg Fried Rice</p>
+                        <p>Quick and delicious way to use leftover rice - packed with vegetables and protein!</p>
+                    </div>
+                </div>
+            </a>
+            <a href="pages/recipes/veggie-wrap.html">
+                <div class="card">
+                    <img src="assets/images/sandimg.jpg" alt="Veggie Wrap" />
+                    <div class="card-content">
+                        <p>Veggie Wrap</p>
+                        <p>Fresh and healthy wrap loaded with colorful vegetables and creamy hummus!</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <h2>Nutrition Facts</h2>
+    <div class="container">
+        <section>
+            <div class="card">
+                <img src="assets/images/bm.jpg" alt="Balanced Meal" />
+                <div class="card-content">
+                    <p>Balanced Meal</p>
+                    <p>A balanced meal for children includes a variety of nutrients from different food groups, ensuring their growth and development. It supports their overall health, boosts energy levels, and enhances cognitive function, setting the foundation for a healthy and active life.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/images/salmon.jpg" alt="Omega-3 Rich Food" />
+                <div class="card-content">
+                    <p>Omega-3 Brain Boost</p>
+                    <p>Including foods rich in omega-3 fatty acids, such as salmon and flaxseeds, in your child's diet can enhance cognitive function and may even improve their concentration and learning abilities.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/images/mt.jpg" alt="Family Mealtime" />
+                <div class="card-content">
+                    <p>Mealtime Environment Matters</p>
+                    <p>Creating a positive and relaxed mealtime environment can impact your child's eating habits. Family meals, limited distractions, and pleasant conversations can foster healthier eating habits and a better relationship with food.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/images/fruit-salad.jpg" alt="Colorful Vegetables" />
+                <div class="card-content">
+                    <p>Rainbow on Your Plate</p>
+                    <p>Eating a variety of colorful fruits and vegetables ensures your child gets different vitamins and antioxidants. Each color provides unique health benefits - orange carrots for vision, green spinach for iron, red tomatoes for heart health!</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/images/yogurt-parfait.jpg" alt="Protein Power" />
+                <div class="card-content">
+                    <p>Protein for Growing Bodies</p>
+                    <p>Protein is essential for children's growth, muscle development, and immune function. Budget-friendly sources like eggs, beans, peanut butter, and yogurt can easily be incorporated into daily meals to support your child's active lifestyle.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Login Popup -->
+    <div id="lp" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLp()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" id="login-submit">Login</button>
+                <p>Not a member? <a href="signup.html">Signup</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Budget Parent Recipe | COIT20268 Project</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

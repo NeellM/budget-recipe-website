@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <title>Peanut Butter Toast Recipe | Budget Parent Recipe</title>
+    <meta name="description" content="Classic peanut butter toast with banana - perfect protein-packed breakfast.">
+</head>
+<body>
+    <header class="scrolled-header">
+        <a href="../../index.html">
+            <img src="../../assets/icons/Logo.svg" alt="Budget Recipe Logo" class="logo">
+        </a>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </label>
+        <div class="navbar">
+            <a href="../../breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
+            <a href="../../dinner.html" class="nav-item" style="--i: 2">Dinner</a>
+            <a href="../../favorites.html" class="nav-item" style="--i: 0">Favorites</a>
+            <a href="#" class="nav-item" style="--i: 2" id="login-link">Login/Signup</a>
+            <a href="../../contact.html" class="nav-item" style="--i: 3">Contact Us</a>
+        </div>
+    </header>
+
+    <h3>
+        <nav class="breadcrumbs">
+            <a href="../../index.html">Home</a> &gt;
+            <a href="../../breakfast.html">Breakfast</a> &gt;
+            <a href="#">Peanut Butter Toast</a>
+        </nav>
+    </h3>
+
+    <div class="grid-container">
+        <div class="image-container">
+            <img src="../../assets/images/avocado-toast.jpg" alt="Peanut Butter Toast">
+        </div>
+        <div class="recipe-content">
+            <ol>
+                <li>
+                    <h1>Peanut Butter Toast</h1>
+                </li>
+                <li>
+                    <p>
+                        <div class="ingredients">
+                            <h2 class="section-title">Ingredients:</h2>
+                            <ul>
+                                <li>2 slices whole wheat bread</li>
+                                <li>3 tablespoons peanut butter</li>
+                                <li>1 banana, sliced</li>
+                                <li>1 teaspoon honey (optional)</li>
+                                <li>Pinch of cinnamon</li>
+                                <li>Optional: chia seeds or granola for topping</li>
+                            </ul>
+                        </div>
+                    </p>
+                </li>
+                <li>
+                    <div class="procedure">
+                        <h2 class="section-title">Procedure:</h2>
+                        <ul>
+                            <li>Toast the bread slices until golden and crispy</li>
+                            <li>Spread peanut butter generously on each slice while still warm</li>
+                            <li>Arrange banana slices on top of the peanut butter</li>
+                            <li>Drizzle with honey if desired</li>
+                            <li>Sprinkle with a pinch of cinnamon</li>
+                            <li>Add chia seeds or granola for extra crunch</li>
+                            <li>Serve immediately while warm</li>
+                        </ul>
+                        <p><strong>Prep Time:</strong> 5 minutes | <strong>Serves:</strong> 2</p>
+                        <p><strong>Cost:</strong> Under $2</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div id="lp" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLp()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" id="login-submit">Login</button>
+                <p>Not a member? <a href="../../signup.html">Signup</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Budget Parent Recipe | COIT20268 Project</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/main.js"></script>
+</body>
+</html>

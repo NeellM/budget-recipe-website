@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Sign Up | Budget Parent Recipe</title>
+    <meta name="description" content="Create your account to save and share your favorite recipes.">
+</head>
+<body>
+    <header class="scrolled-header">
+        <a href="index.html">
+            <img src="assets/icons/Logo.svg" alt="Budget Recipe Logo" class="logo">
+        </a>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </label>
+        <div class="navbar">
+            <a href="breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
+            <a href="dinner.html" class="nav-item" style="--i: 2">Dinner</a>
+            <a href="favorites.html" class="nav-item" style="--i: 0">Favorites</a>
+            <a href="#" class="nav-item active" style="--i: 2" id="login-link">Login/Signup</a>
+            <a href="contact.html" class="nav-item" style="--i: 3">Contact Us</a>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>Sign Up</h1>
+        <p>Create an account to access all our budget-friendly recipes!</p>
+        <p class="notice">Note: This is a prototype feature. Actual signup functionality is not implemented.</p>
+    </div>
+
+    <div class="container">
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required minlength="6">
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="children">Number of Children:</label>
+                <select id="children" name="children">
+                    <option value="0">None</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4+">4 or more</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Sign Up</button>
+            </div>
+
+            <p class="login-link">Already have an account? <a href="#" id="login-link-text">Login here</a></p>
+        </form>
+    </div>
+
+    <!-- Login Popup -->
+    <div id="lp" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLp()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username-login">Username:</label>
+                <input type="text" id="username-login" name="username" required>
+
+                <label for="password-login">Password:</label>
+                <input type="password" id="password-login" name="password" required>
+
+                <button type="submit" id="login-submit">Login</button>
+                <p>Not a member? <a href="signup.html">Signup</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Budget Parent Recipe | COIT20268 Project</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Simple signup form handler
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+
+            alert('Signup feature is a prototype. Click OK to be redirected to home.');
+            window.location.href = 'index.html';
+        });
+
+        // Login link in signup page
+        document.getElementById('login-link-text').addEventListener('click', function(e) {
+            e.preventDefault();
+            showLp();
+        });
+    </script>
+</body>
+</html>

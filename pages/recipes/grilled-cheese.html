@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <title>Grilled Cheese Sandwich Recipe | Budget Parent Recipe</title>
+    <meta name="description" content="Classic grilled cheese sandwich - a kid favorite!">
+</head>
+<body>
+    <header class="scrolled-header">
+        <a href="../../index.html">
+            <img src="../../assets/icons/Logo.svg" alt="Budget Recipe Logo" class="logo">
+        </a>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </label>
+        <div class="navbar">
+            <a href="../../breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
+            <a href="../../dinner.html" class="nav-item" style="--i: 2">Dinner</a>
+            <a href="../../favorites.html" class="nav-item" style="--i: 0">Favorites</a>
+            <a href="#" class="nav-item" style="--i: 2" id="login-link">Login/Signup</a>
+            <a href="../../contact.html" class="nav-item" style="--i: 3">Contact Us</a>
+        </div>
+    </header>
+
+    <h3>
+        <nav class="breadcrumbs">
+            <a href="../../index.html">Home</a> &gt;
+            <a href="../../breakfast.html">Breakfast</a> &gt;
+            <a href="#">Grilled Cheese</a>
+        </nav>
+    </h3>
+
+    <div class="grid-container">
+        <div class="image-container">
+            <img src="../../assets/images/sandimg.jpg" alt="Grilled Cheese Sandwich">
+        </div>
+        <div class="recipe-content">
+            <ol>
+                <li>
+                    <h1>Grilled Cheese Sandwich</h1>
+                </li>
+                <li>
+                    <p>
+                        <div class="ingredients">
+                            <h2 class="section-title">Ingredients:</h2>
+                            <ul>
+                                <li>4 slices bread</li>
+                                <li>4 slices cheddar cheese (or your favorite cheese)</li>
+                                <li>2 tablespoons butter, softened</li>
+                                <li>Optional: 2 slices tomato or ham</li>
+                            </ul>
+                        </div>
+                    </p>
+                </li>
+                <li>
+                    <div class="procedure">
+                        <h2 class="section-title">Procedure:</h2>
+                        <ul>
+                            <li>Butter one side of each bread slice</li>
+                            <li>Heat a skillet or griddle over medium heat</li>
+                            <li>Place one slice of bread butter-side down in the pan</li>
+                            <li>Layer cheese slices on top (add tomato or ham if using)</li>
+                            <li>Top with second bread slice, butter-side up</li>
+                            <li>Cook for 2-3 minutes until bottom is golden brown</li>
+                            <li>Carefully flip sandwich and cook other side for 2-3 minutes</li>
+                            <li>Press down gently with spatula for even browning</li>
+                            <li>Remove when both sides are golden and cheese is melted</li>
+                            <li>Cut diagonally and serve hot</li>
+                        </ul>
+                        <p><strong>Prep Time:</strong> 5 minutes | <strong>Cook Time:</strong> 6 minutes | <strong>Serves:</strong> 2</p>
+                        <p><strong>Cost:</strong> Under $2</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div id="lp" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLp()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" id="login-submit">Login</button>
+                <p>Not a member? <a href="../../signup.html">Signup</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Budget Parent Recipe | COIT20268 Project</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/main.js"></script>
+</body>
+</html>
