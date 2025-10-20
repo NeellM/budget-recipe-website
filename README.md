@@ -167,12 +167,6 @@ This restructured version includes:
 8. **Updated Paths**: All file references corrected for new structure
 9. **Enhanced Comments**: Added code documentation throughout
 
-## Course Information
-
-- **Course Code**: COIT20268
-- **Project**: Assignment 3 - Project B Prototype
-- **Author**: Neel
-
 ## License
 
 This project was created for educational purposes as part of university coursework.
