@@ -25,7 +25,7 @@
             <a href="../../breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
             <a href="../../dinner.html" class="nav-item" style="--i: 2">Dinner</a>
             <a href="../../favorites.html" class="nav-item" style="--i: 0">Favorites</a>
-            <a href="#" class="nav-item" style="--i: 2" id="login-link">Login/Signup</a>
+            <a href="#" class="nav-item" style="--i: 2" onclick="openAuthModal('login-modal'); return false;">Login/Signup</a>
             <a href="../../contact.html" class="nav-item" style="--i: 3">Contact Us</a>
         </div>
     </header>
@@ -84,23 +84,79 @@
         </div>
     </div>
 
-    <!-- Login Popup -->
-    <div id="lp" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closeLp()">&times;</span>
-            <h2>Login</h2>
-            <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+    <!-- Authentication Modals -->
+    <div id="auth-backdrop" class="auth-backdrop"></div>
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-
-                <button type="submit" id="login-submit">Login</button>
-                <p>Not a member? <a href="../../signup.html">Signup</a></p>
+    <div id="login-modal" class="auth-modal">
+        <div class="auth-modal-card">
+            <button class="auth-close-btn" onclick="closeAuthModal()">&times;</button>
+            <div class="auth-modal-header">
+                <h2>Welcome Back!</h2>
+                <p>Login to access your favorite recipes</p>
+            </div>
+            <form id="login-form-modal" class="auth-form">
+                <div class="auth-form-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="auth-form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="auth-submit-btn">Login</button>
             </form>
+            <div class="auth-switch">
+                <p>Don't have an account? <a href="#" onclick="switchToSignup(event)">Sign up here</a></p>
+            </div>
         </div>
     </div>
+
+    <div id="signup-modal" class="auth-modal">
+        <div class="auth-modal-card">
+            <button class="auth-close-btn" onclick="closeAuthModal()">&times;</button>
+            <div class="auth-modal-header">
+                <h2>Join Us!</h2>
+                <p>Create an account to save your favorite recipes</p>
+            </div>
+            <form id="signup-form-modal" class="auth-form">
+                <div class="auth-form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="auth-form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" name="email" placeholder="your.email@example.com" required>
+                </div>
+                <div class="auth-form-group">
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" name="username" placeholder="Choose a username" required>
+                </div>
+                <div class="auth-form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="password" placeholder="Create a password (min 6 characters)" required minlength="6">
+                </div>
+                <div class="auth-form-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+                </div>
+                <div class="auth-form-group">
+                    <label for="signup-children">Number of Children</label>
+                    <select id="signup-children" name="children">
+                        <option value="0">None</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4+">4 or more</option>
+                    </select>
+                </div>
+                <button type="submit" class="auth-submit-btn">Sign Up</button>
+            </form>
+            <div class="auth-switch">
+                <p>Already have an account? <a href="#" onclick="switchToLogin(event)">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
 
     <footer>
         <div class="footer-content">
