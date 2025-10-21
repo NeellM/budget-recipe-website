@@ -3,73 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Login | Budget Parent Recipe</title>
-    <meta name="description" content="Login to access your favorite budget-friendly recipes.">
+    <title>Redirecting to Login | Budget Parent Recipe</title>
+    <meta http-equiv="refresh" content="0; url=index.html">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FFDB63 0%, #51ff41e6 100%);
+            text-align: center;
+            padding: 20px;
+        }
+        .redirect-message {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #FFDB63;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a:hover {
+            color: #51ff41e6;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #FFDB63;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        // Redirect immediately and try to open the login modal
+        window.location.href = 'index.html';
+
+        // Fallback: if user somehow sees this page, redirect after a brief moment
+        setTimeout(function() {
+            if (window.location.pathname.includes('login.html')) {
+                window.location.href = 'index.html';
+            }
+        }, 100);
+    </script>
 </head>
 <body>
-    <header class="scrolled-header">
-        <a href="index.html">
-            <img src="assets/icons/Logo.svg" alt="Budget Recipe Logo" class="logo">
-        </a>
-
-        <input type="checkbox" id="check" />
-        <label for="check" class="icons">
-            <div class="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </label>
-        <div class="navbar">
-            <a href="breakfast.html" class="nav-item" style="--i: 1">Breakfast</a>
-            <a href="dinner.html" class="nav-item" style="--i: 2">Dinner</a>
-            <a href="favorites.html" class="nav-item" style="--i: 0">Favorites</a>
-            <a href="#" class="nav-item active" style="--i: 2">Login/Signup</a>
-            <a href="contact.html" class="nav-item" style="--i: 3">Contact Us</a>
-        </div>
-    </header>
-
-    <div class="content">
-        <h1>Login</h1>
-        <p>Welcome back! Please login to your account.</p>
-        <p class="notice">Note: This is a prototype feature. Actual login functionality is not implemented.</p>
+    <div class="redirect-message">
+        <h1>Redirecting...</h1>
+        <div class="spinner"></div>
+        <p>We've modernized our login experience! You're being redirected to our new login system.</p>
+        <p>If you're not redirected automatically, <a href="index.html">click here</a>.</p>
     </div>
-
-    <div class="container">
-        <form id="login-form">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            </div>
-
-            <div class="form-group">
-                <button type="submit">Login</button>
-            </div>
-
-            <p class="signup-link">Don't have an account? <a href="signup.html">Sign up here</a></p>
-        </form>
-    </div>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Budget Parent Recipe | COIT20268 Project</p>
-        </div>
-    </footer>
-
-    <script src="scripts/main.js"></script>
-    <script>
-        // Simple login form handler
-        document.getElementById('login-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Login feature is a prototype. Click OK to be redirected to home.');
-            window.location.href = 'index.html';
-        });
-    </script>
 </body>
 </html>

@@ -67,41 +67,153 @@ if (closeThankYouBtn) {
 }
 
 // ============================================
-// LOGIN POPUP FUNCTIONALITY
+// MODERN AUTHENTICATION MODAL SYSTEM
 // ============================================
 
-// Function to show the login popup
-function showLp() {
-  const loginPopup = document.getElementById("lp");
-  if (loginPopup) {
-    loginPopup.style.display = "block";
+/**
+ * Opens a modal with smooth animation
+ * @param {string} modalId - The ID of the modal to open ('login-modal' or 'signup-modal')
+ */
+function openAuthModal(modalId) {
+  const backdrop = document.getElementById('auth-backdrop');
+  const modal = document.getElementById(modalId);
+
+  if (backdrop && modal) {
+    // Show backdrop
+    backdrop.classList.add('active');
+
+    // Small delay for smooth animation
+    setTimeout(() => {
+      modal.classList.add('active');
+    }, 10);
+
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
   }
 }
 
-// Function to close the login popup
-function closeLp() {
-  const loginPopup = document.getElementById("lp");
-  if (loginPopup) {
-    loginPopup.style.display = "none";
-  }
+/**
+ * Closes all authentication modals
+ */
+function closeAuthModal() {
+  const backdrop = document.getElementById('auth-backdrop');
+  const loginModal = document.getElementById('login-modal');
+  const signupModal = document.getElementById('signup-modal');
+
+  // Remove active class from all modals
+  if (loginModal) loginModal.classList.remove('active');
+  if (signupModal) signupModal.classList.remove('active');
+
+  // Hide backdrop after modal animation completes
+  setTimeout(() => {
+    if (backdrop) backdrop.classList.remove('active');
+  }, 300);
+
+  // Re-enable body scroll
+  document.body.style.overflow = '';
 }
 
-// Event listener for opening the login popup
+/**
+ * Switch from login to signup modal
+ */
+function switchToSignup(event) {
+  if (event) event.preventDefault();
+
+  const loginModal = document.getElementById('login-modal');
+  const signupModal = document.getElementById('signup-modal');
+
+  if (loginModal) loginModal.classList.remove('active');
+
+  setTimeout(() => {
+    if (signupModal) signupModal.classList.add('active');
+  }, 300);
+}
+
+/**
+ * Switch from signup to login modal
+ */
+function switchToLogin(event) {
+  if (event) event.preventDefault();
+
+  const signupModal = document.getElementById('signup-modal');
+  const loginModal = document.getElementById('login-modal');
+
+  if (signupModal) signupModal.classList.remove('active');
+
+  setTimeout(() => {
+    if (loginModal) loginModal.classList.add('active');
+  }, 300);
+}
+
+// Event listener for Login/Signup nav link
 const loginLink = document.getElementById("login-link");
 if (loginLink) {
   loginLink.addEventListener("click", function(e) {
     e.preventDefault();
-    showLp();
+    openAuthModal('login-modal');
   });
 }
 
+// Close modal when clicking backdrop
+const authBackdrop = document.getElementById('auth-backdrop');
+if (authBackdrop) {
+  authBackdrop.addEventListener('click', closeAuthModal);
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeAuthModal();
+  }
+});
+
 // Handle login form submission
-const loginSubmit = document.getElementById("login-submit");
-if (loginSubmit) {
-  loginSubmit.addEventListener("click", function(event) {
-    event.preventDefault();
-    alert("Feature out of assignment scope. Click ok to be redirected to home");
-    window.location.href = "index.html";
+const loginFormModal = document.getElementById('login-form-modal');
+if (loginFormModal) {
+  loginFormModal.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+
+    // For now, just show a message (backend will be implemented later)
+    alert(`Welcome back, ${username}! This is a prototype - backend functionality coming soon.`);
+    closeAuthModal();
+
+    // TODO: Add actual authentication logic here when backend is ready
+  });
+}
+
+// Handle signup form submission
+const signupFormModal = document.getElementById('signup-form-modal');
+if (signupFormModal) {
+  signupFormModal.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('signup-name').value;
+    const email = document.getElementById('signup-email').value;
+    const username = document.getElementById('signup-username').value;
+    const password = document.getElementById('signup-password').value;
+    const confirmPassword = document.getElementById('signup-confirm-password').value;
+    const children = document.getElementById('signup-children').value;
+
+    // Validate password match
+    if (password !== confirmPassword) {
+      alert('Passwords do not match! Please try again.');
+      return;
+    }
+
+    // Validate password length
+    if (password.length < 6) {
+      alert('Password must be at least 6 characters long.');
+      return;
+    }
+
+    // For now, just show a success message
+    alert(`Account created successfully, ${name}! This is a prototype - backend functionality coming soon.`);
+    closeAuthModal();
+
+    // TODO: Add actual registration logic here when backend is ready
   });
 }
 

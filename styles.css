@@ -352,34 +352,228 @@ section {
   color: #000000; /* Text color */
 }
 
-/* Styles for the popup overlay */
-.popup {
-  display: none; /* Initially hidden */
+/* ================================
+   MODERN AUTHENTICATION MODALS
+   ================================ */
+
+/* Backdrop - dims the background */
+.auth-backdrop {
+  display: none; /* Hidden by default */
   position: fixed;
-  top: 100px;
-  left: 350px;
-  width: 50%;
-  height: relative; /* Relative height */
-  background: rgba(255, 255, 255, 0.7); /* Overlay background color */
-  z-index: 200; 
-  align-items: center;
-  justify-content: center;
-}
-/* Styles for the popup content */
-.popup-content {
-  background: #fff; /* Popup content background color */
-  padding: 20px; /* Padding for popup content */
-  border-radius: 5px; /* Popup content border radius */
-  box-shadow: 0 0 10px rgba(233, 221, 50, 0.719); /* Popup content shadow */
-  text-align: center; /* Center-align text within popup content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  backdrop-filter: blur(5px); /* Blur effect for modern look */
+  z-index: 999; /* Below modal but above everything else */
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-/* Styles for the close button in the popup */
-.close {
+.auth-backdrop.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Modal container */
+.auth-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; /* Above backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none; /* Don't block clicks when hidden */
+  transition: opacity 0.3s ease;
+}
+
+.auth-modal.active {
+  display: flex;
+  opacity: 1;
+  pointer-events: all; /* Allow clicks when visible */
+}
+
+/* The beautiful card itself */
+.auth-modal-card {
+  background: #ffffff;
+  border-radius: 20px; /* Rounded corners like your recipe cards */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); /* Deep shadow for depth */
+  width: 90%;
+  max-width: 480px; /* Comfortable reading width */
+  max-height: 90vh; /* Don't exceed viewport height */
+  overflow-y: auto; /* Scroll if content is too tall */
+  position: relative;
+  transform: scale(0.7); /* Start small for animation */
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy animation */
+  padding: 40px 35px;
+}
+
+.auth-modal.active .auth-modal-card {
+  transform: scale(1); /* Full size when active */
+}
+
+/* Close button */
+.auth-close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer; /* Cursor style for close button */
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+  line-height: 1;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.auth-close-btn:hover {
+  color: #333;
+  transform: rotate(90deg); /* Fun rotation on hover */
+}
+
+/* Modal header */
+.auth-modal-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-modal-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.auth-modal-header p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Form styling */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form fields */
+}
+
+/* Input groups */
+.auth-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-input-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.auth-input-group input,
+.auth-input-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #f9f9f9;
+}
+
+.auth-input-group input:focus,
+.auth-input-group select:focus {
+  outline: none;
+  border-color: #FFDB63; /* Your brand yellow */
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 219, 99, 0.1); /* Subtle glow */
+}
+
+.auth-input-group select {
+  cursor: pointer;
+}
+
+/* Submit button */
+.auth-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #FFDB63; /* Your brand yellow */
+  color: #060606;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.auth-submit-btn:hover {
+  background: #51ff41e6; /* Your brand green */
+  color: #ffffff;
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 5px 15px rgba(81, 255, 65, 0.3);
+}
+
+.auth-submit-btn:active {
+  transform: translateY(0); /* Press down effect */
+}
+
+/* Switch between login/signup */
+.auth-switch {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.auth-switch p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.auth-switch a {
+  color: #FFDB63;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.auth-switch a:hover {
+  color: #51ff41e6;
+  text-decoration: underline;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 500px) {
+  .auth-modal-card {
+    width: 95%;
+    padding: 30px 25px;
+    max-height: 85vh;
+  }
+
+  .auth-modal-header h2 {
+    font-size: 24px;
+  }
+
+  .auth-input-group input,
+  .auth-input-group select {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
 }
 /* Styles for login form */
 form {
