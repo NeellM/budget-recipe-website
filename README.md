@@ -18,8 +18,8 @@ This website was created as part of the COIT20268 university course project. It 
 - **Favorites Collection**: Curated collection of popular recipes
 - **Contact Form**: Users can reach out with inquiries
 - **Responsive Design**: Mobile-friendly layout with hamburger menu
+- **Modern Authentication Modals**: Login/signup with animated modal system (UI complete, backend pending)
 - **Search Functionality**: (Under development)
-- **User Authentication**: (Placeholder - out of scope)
 
 ## Technologies Used
 
@@ -117,14 +117,22 @@ Simply open the `index.html` file in your web browser.
 - Recipe detail pages with ingredients and procedures
 - Nutrition facts educational section
 - Smooth scrolling and animations
-- Login/Signup popups (UI only)
+- Modern authentication modal system (Login/Signup UI)
+- Animated modals with backdrop blur
+- Form validation (client-side)
+- Modal switching (Login ↔ Signup)
 
 ### In Development 🚧
 - Search functionality
-- User authentication
-- Backend integration
-- Recipe filtering
-- User favorites system
+- Backend authentication system
+- Database integration
+- Recipe filtering and sorting
+- User favorites system (save/remove recipes)
+- Password encryption and security
+- Email verification
+- User profile management
+- Recipe submission by users
+- Shopping list generator
 
 ## Browser Compatibility
 
@@ -137,21 +145,31 @@ Simply open the `index.html` file in your web browser.
 ## Known Issues & Limitations
 
 1. **Search Feature**: Currently shows "under development" alert
-2. **Login/Signup**: Placeholder functionality - redirects to home page
+2. **Login/Signup**: UI complete, no backend authentication yet
 3. **No Backend**: All data is static HTML/CSS/JS
 4. **No Database**: Contact form data stored in session storage only
 5. **Image Optimization**: Some images may be large and could be optimized
 
 ## Future Enhancements
 
-- Implement functional search with filters
-- Add user authentication with backend
-- Create database for recipes and user data
-- Add recipe ratings and reviews
-- Implement shopping list generator
-- Add nutritional calculator
-- Include cooking videos
+### Priority Features
+- **Backend Authentication**: Connect login/signup modals to backend API
+- **User Database**: Store user accounts, preferences, and favorites
+- **Recipe Database**: Dynamic recipe loading from database
+- **Search Implementation**: Functional search with filters (ingredients, price, meal type)
+- **User Favorites**: Save/remove recipes with backend persistence
+
+### Additional Features
+- Recipe ratings and reviews system
+- Shopping list generator with export functionality
+- Nutritional calculator per serving
+- Cooking videos/tutorials
 - Multi-language support
+- Meal planning calendar
+- Ingredient substitution suggestions
+- Print-friendly recipe cards
+- Social sharing (Facebook, Pinterest, Twitter)
+- User-submitted recipes with moderation
 
 ## Project Improvements Made
 
@@ -166,6 +184,14 @@ This restructured version includes:
 7. **Better Documentation**: README and package.json for professional setup
 8. **Updated Paths**: All file references corrected for new structure
 9. **Enhanced Comments**: Added code documentation throughout
+
+### Latest Updates (October 2025)
+10. **Modern Authentication Modals**: Replaced basic popups with professional modal system
+11. **CSS Architecture**: Single CSS file (styles/styles.css) with modern variables and gradients
+12. **Animation System**: Smooth transitions with backdrop blur effects
+13. **Consistent UI**: Yellow/green gradient theme across all pages
+14. **Mobile Optimization**: Fully responsive modal design for all devices
+15. **Documentation**: Added comprehensive session logs in documentation/ folder
 
 ## License
 
